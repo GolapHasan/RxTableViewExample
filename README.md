@@ -3,11 +3,11 @@
 An example project of UITableView with RxSwift
 
 ## DataSet
-```
+``` swift
 let countryArray = ["Bangladesh", "India", "Pakistan", "Nepal", "Bhutan", "China", "Malaysia", "Myanmar", "Sri Lanka", "Saudi Arabia"]
 ```
 ## Cell Configuring
-```
+``` swift
 override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,33 +17,33 @@ override func viewDidLoad() {
         setupCellTapHandling()
     }
     
-    func setupItems() {
-        
-        tableView.register(UINib.init(nibName: "CountryCell", bundle: Bundle.main), forCellReuseIdentifier: "CountryCell")
-        
-        let countries = Observable.just(countryArray)
-        countries.bind(to: self.tableView.rx.items(cellIdentifier: "CountryCell",
-                                            cellType: CountryCell.self)) {
-                                                row, country, cell in
-                                                cell.countryLabel.text = country
-        }
-        .disposed(by: disposeBag)
-        
-    }
+func setupItems() {
     
-    private func setupCellTapHandling() {
-        tableView
-            .rx
-            .modelSelected(String.self)
-            .subscribe(onNext: {
-                coutry in
-                print("coutry tapped: ", coutry)
-                if let selectedRowIndexPath = self.tableView.indexPathForSelectedRow {
-                    self.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
-                }
-            })
-            .disposed(by: disposeBag)
+    tableView.register(UINib.init(nibName: "CountryCell", bundle: Bundle.main), forCellReuseIdentifier: "CountryCell")
+    
+    let countries = Observable.just(countryArray)
+    countries.bind(to: self.tableView.rx.items(cellIdentifier: "CountryCell",
+                                        cellType: CountryCell.self)) {
+                                            row, country, cell in
+                                            cell.countryLabel.text = country
     }
+    .disposed(by: disposeBag)
+    
+}
+
+private func setupCellTapHandling() {
+    tableView
+        .rx
+        .modelSelected(String.self)
+        .subscribe(onNext: {
+            coutry in
+            print("coutry tapped: ", coutry)
+            if let selectedRowIndexPath = self.tableView.indexPathForSelectedRow {
+                self.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
+            }
+        })
+        .disposed(by: disposeBag)
+}
 ```
 
 All Done, Enjoy! 😊

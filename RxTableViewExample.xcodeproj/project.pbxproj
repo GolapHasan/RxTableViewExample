@@ -15,6 +15,7 @@
 		E542C3CA20B521A7009DB610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E542C3C820B521A7009DB610 /* LaunchScreen.storyboard */; };
 		E542C3D920B533F0009DB610 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E542C3D720B533F0009DB610 /* CountryCell.swift */; };
 		E542C3DA20B533F0009DB610 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E542C3D820B533F0009DB610 /* CountryCell.xib */; };
+		E542C3DC20B538E7009DB610 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E542C3DB20B538E7009DB610 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E542C3CB20B521A7009DB610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E542C3D720B533F0009DB610 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		E542C3D820B533F0009DB610 /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
+		E542C3DB20B538E7009DB610 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		E542C3B320B521A5009DB610 = {
 			isa = PBXGroup;
 			children = (
+				E542C3DB20B538E7009DB610 /* README.md */,
 				E542C3BE20B521A5009DB610 /* RxTableViewExample */,
 				E542C3BD20B521A5009DB610 /* Products */,
 				615846D386330FA8640034C6 /* Pods */,
@@ -164,6 +167,7 @@
 			files = (
 				E542C3DA20B533F0009DB610 /* CountryCell.xib in Resources */,
 				E542C3CA20B521A7009DB610 /* LaunchScreen.storyboard in Resources */,
+				E542C3DC20B538E7009DB610 /* README.md in Resources */,
 				E542C3C720B521A7009DB610 /* Assets.xcassets in Resources */,
 				E542C3C520B521A5009DB610 /* Main.storyboard in Resources */,
 			);
